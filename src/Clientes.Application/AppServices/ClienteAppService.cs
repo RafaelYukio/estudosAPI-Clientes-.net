@@ -27,8 +27,7 @@ namespace Clientes.Application.AppServices
             return clientes.Select(ConverterParaClienteNomeResponse);
         }
 
-        public async Task<ClienteResponse> GetByIdAsync(int id) =>
-            ConverterParaClienteResponse(await _clienteService.GetByIdAsync(id));
+        public async Task<ClienteResponse> GetByIdAsync(int id) => ConverterParaClienteResponse(await _clienteService.GetByIdAsync(id));
 
         public async Task<ClienteResponse> InsertAsync(InsertClienteRequest insertClienteRequest) =>
             ConverterParaClienteResponse(await _clienteService.InsertAsync(insertClienteRequest.ConverterParaEntidade()));
@@ -39,11 +38,14 @@ namespace Clientes.Application.AppServices
         public async Task RemoveAsync(int id) =>
             await _clienteService.RemoveAsync(id);
 
-        private ClienteResponse ConverterParaClienteResponse(Cliente cliente) => new ClienteResponse(cliente.Id,
-                                                                                              cliente.NomeCompleto,
-                                                                                              cliente.Telefone,
-                                                                                              cliente.Detalhes.Email,
-                                                                                              cliente.Detalhes.Endereco);
+        private ClienteResponse ConverterParaClienteResponse(Cliente cliente) {
+            if(cliente != null) return new ClienteResponse(cliente.Id,
+                                                           cliente.NomeCompleto,
+                                                           cliente.Telefone,
+                                                           cliente.Detalhes.Email,
+                                                           cliente.Detalhes.Endereco);
+            return null;
+        } 
 
         private ClienteNomeResponse ConverterParaClienteNomeResponse(Cliente cliente) => new ClienteNomeResponse(cliente.Id,
                                                                                                                  cliente.NomeCompleto);

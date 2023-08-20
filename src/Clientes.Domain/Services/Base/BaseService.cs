@@ -4,7 +4,7 @@ using Clientes.Domain.Interfaces.Services.Base;
 
 namespace Clientes.Domain.Services.Base
 {
-    public class BaseService<T> : IBaseService<T> where T : BaseEntity
+    public abstract class BaseService<T> : IBaseService<T> where T : BaseEntity
     {
         private readonly IBaseRepository<T> _baseRepository;
         public BaseService(IBaseRepository<T> baseRepository)
@@ -21,10 +21,21 @@ namespace Clientes.Domain.Services.Base
         public virtual async Task<T> InsertAsync(T entity) =>
             await _baseRepository.InsertAsync(entity);
 
-        public virtual async Task<T> UpdateAsync(T entity) =>
-            await _baseRepository.UpdateAsync(entity);
+        public virtual async Task<T> UpdateAsync(T entity)
+        {
+            T dbEntity = await GetByIdAsync(entity.Id);
 
-        public virtual async Task RemoveAsync(int id) =>
-            await _baseRepository.RemoveAsync(id);
+            if(dbEntity != null) return await _baseRepository.UpdateAsync(entity);
+            return null;
+        }
+
+        public virtual async Task RemoveAsync(int id)
+        {
+            T dbEntity = await GetByIdAsync(id);
+
+            if (dbEntity != null) await _baseRepository.RemoveAsync(id);
+            return;
+        }
+            
     }
 }

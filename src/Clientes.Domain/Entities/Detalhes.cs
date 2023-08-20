@@ -1,4 +1,5 @@
 ﻿using Clientes.Domain.Entities.Base;
+using Clientes.Domain.Entities.Validations;
 
 namespace Clientes.Domain.Entities
 {
@@ -12,6 +13,17 @@ namespace Clientes.Domain.Entities
         {
             Endereco = endereco;
             Email = email;
+
+            Validate();
+        }
+
+        public override void Validate()
+        {
+            var validator = new DetalhesValidator();
+            if(!validator.Validate(this).IsValid)
+            {
+                throw new InvalidOperationException($"Não é possível criar {GetType().Name}.");
+            }
         }
     }
 }

@@ -1,7 +1,11 @@
-﻿namespace Clientes.Domain.Entities.Base
+﻿using System.Net.Http.Headers;
+
+namespace Clientes.Domain.Entities.Base
 {
-    public class BaseEntity
+    public abstract class BaseEntity
     {
         public int Id { get; set; }
+
+        public abstract void Validate();
     }
 }

@@ -50,6 +50,20 @@ namespace Clientes.API.Tests.Controllers
         }
 
         [Fact]
+        public async Task InsertCliente_PropriedadeTelefoneInvalida_ThrowsModelValidationError()
+        {
+            // Arrange
+            InsertClienteRequest insertClienteRequest = new("Nome Completo", "", "email@email.com", "Endereço");
+
+            // Act
+            var modelValidationErrors = ValidateModel(insertClienteRequest);
+
+            // Assert
+            Assert.True(modelValidationErrors.Count == 1);
+            Assert.True(modelValidationErrors.Where(x => x.ErrorMessage.Contains("Telefone é obrigatório")).Count() > 0);
+        }
+
+        [Fact]
         public async Task InsertCliente_PropriedadeValidas_ValidaModel()
         {
             // Arrange
@@ -83,7 +97,23 @@ namespace Clientes.API.Tests.Controllers
         }
 
         [Fact]
-        public async Task InsertCliente_PropriedadeValidas_Ok()
+        public async Task InsertCliente_PropriedadeTelefoneInvalida_BadRequest()
+        {
+            // Arrange
+            var client = _factory.CreateClient();
+            InsertClienteRequest insertClienteRequest = new("Nome Completo", "", "email@email.com", "Endereço");
+            var json = JsonConvert.SerializeObject(insertClienteRequest);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            // Act
+            var result = await client.PostAsync("api/clientes", content);
+
+            // Assert
+            Assert.Equal((int)HttpStatusCode.BadRequest, (int)result.StatusCode);
+        }
+
+        [Fact]
+        public async Task InsertCliente_PropriedadeValidas_Created()
         {
             // Arrange
             var client = _factory.CreateClient();

@@ -27,14 +27,10 @@ namespace Clientes.API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ClienteResponse>> GetClienteById(int id)
         {
-            try
-            {
-                return Ok(await _clienteAppService.GetByIdAsync(id));
-            }
-            catch
-            {
-                return BadRequest();
-            }
+            ClienteResponse clienteResponse = await _clienteAppService.GetByIdAsync(id);
+            if (clienteResponse != null) return Ok(clienteResponse);
+
+            return NotFound();
         }
 
         [HttpPost]
@@ -47,28 +43,17 @@ namespace Clientes.API.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult<ClienteResponse>> UpdateCliente(int id, UpdateClienteRequest updateClienteRequest)
         {
-            try
-            {
-                return Ok(await _clienteAppService.UpdateAsync(updateClienteRequest, id));
-            }
-            catch
-            {
-                return BadRequest();
-            }
+            ClienteResponse clienteResponse = await _clienteAppService.UpdateAsync(updateClienteRequest, id);
+            if (clienteResponse != null) return Ok(clienteResponse);
+
+            return NotFound();
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> RemoveCliente(int id)
         {
-            try
-            {
-                await _clienteAppService.RemoveAsync(id);
-                return NoContent();
-            }
-            catch
-            {
-                return BadRequest();
-            }
+            await _clienteAppService.RemoveAsync(id);
+            return NoContent();
         }
     }
 }

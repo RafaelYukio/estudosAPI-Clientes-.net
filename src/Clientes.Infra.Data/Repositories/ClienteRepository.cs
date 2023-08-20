@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Clientes.Infra.Data.Repositories
 {
-    public class ClienteRepository : BaseRepository<Cliente>, IClienteRepository
+    public sealed class ClienteRepository : BaseRepository<Cliente>, IClienteRepository
     {
         public ClienteRepository(DataContext context) : base(context) { }
 
