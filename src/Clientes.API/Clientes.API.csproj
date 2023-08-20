@@ -16,8 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Clientes.Infra.IoC\Clientes.Infra.IoC.csproj" />
     <ProjectReference Include="..\Clientes.Application\Clientes.Application.csproj" />
+    <ProjectReference Include="..\Clientes.Infra.IoC\Clientes.Infra.IoC.csproj" />
+
   </ItemGroup>
 
 </Project>
