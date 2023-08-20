@@ -76,7 +76,7 @@ namespace Clientes.API.Tests.Controllers
             Assert.True(modelValidationErrors.Count == 0);
         }
 
-        [Fact]
+        [Fact(Skip = "Teste de Integração, adicionando dados na tabela")]
         // Teste de integração
         // Utilizando o pacote Microsoft.AspNetCore.Mvc.Testing:
         // https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-7.0
@@ -96,7 +96,7 @@ namespace Clientes.API.Tests.Controllers
             Assert.Equal((int)HttpStatusCode.BadRequest, (int)result.StatusCode);
         }
 
-        [Fact]
+        [Fact(Skip = "Teste de Integração, adicionando dados na tabela")]
         public async Task InsertCliente_PropriedadeTelefoneInvalida_BadRequest()
         {
             // Arrange
@@ -112,7 +112,7 @@ namespace Clientes.API.Tests.Controllers
             Assert.Equal((int)HttpStatusCode.BadRequest, (int)result.StatusCode);
         }
 
-        [Fact]
+        [Fact(Skip = "Teste de Integração, adicionando dados na tabela")]
         public async Task InsertCliente_PropriedadeValidas_Created()
         {
             // Arrange
