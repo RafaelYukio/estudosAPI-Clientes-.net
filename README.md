@@ -25,15 +25,17 @@ O que foi utlizado neste projeto:
 
 <details>
 <summary>Response</summary>
+```json
     [
         {
-        "id": 0,
-        "nomeCompleto": "Nome Completo",
-        "telefone": "(99) 99999-9999",
-        "email": "email@email.com",
-        "endereco": "Rua Tal"
+            "id": 0,
+            "nomeCompleto": "Nome Completo",
+            "telefone": "(99) 99999-9999",
+            "email": "email@email.com",
+            "endereco": "Rua Tal"
         }
     ]
+```
 </details>
 </br>
 
@@ -42,12 +44,14 @@ O que foi utlizado neste projeto:
 
 <details>
 <summary>Response</summary>
+```json
     [
         {
             "id": 0,
             "nomeCompleto": "Nome Completo
         }
     ]
+```
 </details>
 </br>
 
@@ -56,13 +60,15 @@ O que foi utlizado neste projeto:
 
 <details>
 <summary>Response</summary>
+```json
     {
-    "id": 0,
-    "nomeCompleto": "Nome Completo",
-    "telefone": "(99) 99999-9999",
-    "email": "email@email.com",
-    "endereco": "Rua Tal"
+        "id": 0,
+        "nomeCompleto": "Nome Completo",
+        "telefone": "(99) 99999-9999",
+        "email": "email@email.com",
+        "endereco": "Rua Tal"
     }
+```
 </details>
 </br>
 
@@ -71,22 +77,26 @@ O que foi utlizado neste projeto:
 
 <details>
 <summary>Request</summary>
+```json
     {
-    "nomeCompleto": "Nome Completo",
-    "telefone": "(99) 99999-9999",
-    "email": "email@email.com",
-    "endereco": "Rua Tal"
+        "nomeCompleto": "Nome Completo",
+        "telefone": "(99) 99999-9999",
+        "email": "email@email.com",
+        "endereco": "Rua Tal"
     }
+```
 </details>
 <details>
 <summary>Response</summary>
+```json
     {
-    "id": 0,
-    "nomeCompleto": "Nome Completo",
-    "telefone": "(99) 99999-9999",
-    "email": "email@email.com",
-    "endereco": "Rua Tal"
+        "id": 0,
+        "nomeCompleto": "Nome Completo",
+        "telefone": "(99) 99999-9999",
+        "email": "email@email.com",
+        "endereco": "Rua Tal"
     }
+```
 </details>
 </br>
 
@@ -95,22 +105,26 @@ O que foi utlizado neste projeto:
 
 <details>
 <summary>Request</summary>
+```json
     {
-    "nomeCompleto": "Nome Completo",
-    "telefone": "(99) 99999-9999",
-    "email": "email@email.com",
-    "endereco": "Rua Tal"
+        "nomeCompleto": "Nome Completo",
+        "telefone": "(99) 99999-9999",
+        "email": "email@email.com",
+        "endereco": "Rua Tal"
     }
+```
 </details>
 <details>
 <summary>Response</summary>
+```json
     {
-    "id": 0,
-    "nomeCompleto": "Nome Completo",
-    "telefone": "(99) 99999-9999",
-    "email": "email@email.com",
-    "endereco": "Rua Tal"
+        "id": 0,
+        "nomeCompleto": "Nome Completo",
+        "telefone": "(99) 99999-9999",
+        "email": "email@email.com",
+        "endereco": "Rua Tal"
     }
+```
 </details>
 </br>
 
@@ -119,14 +133,14 @@ O que foi utlizado neste projeto:
 
 ## Materiais utilizados
 
-<div style="display: flex; flex-direction: column;justify-content: center">
-    <div style="text-align: center; width: 100%">
+<p align="center">
         <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*3LCl6RxN9cyYyl8z.jpeg" width="400px">
-    </div>
+</p>
+<p align="center">
     <span style="font-size: 12px; text-align: center; width: 100%">Fonte: Implementando na prática Rest API com conceitos de DDD + .NET CORE + SQL no Docker + IoC -[Parte Técnica]</br>
 (https://medium.com/beelabacademy/implementando-na-pr%C3%A1tica-rest-api-com-conceitos-de-ddd-net-2160291a44b7)
-</span>
-</div>
+    </span>
+</p>
 </br>
 
 <details>
