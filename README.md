@@ -25,6 +25,7 @@ O que foi utlizado neste projeto:
 
 <details>
 <summary>Response</summary>
+    
 ```json
     [
         {
@@ -36,6 +37,7 @@ O que foi utlizado neste projeto:
         }
     ]
 ```
+    
 </details>
 </br>
 
@@ -44,14 +46,16 @@ O que foi utlizado neste projeto:
 
 <details>
 <summary>Response</summary>
+    
 ```json
     [
         {
             "id": 0,
-            "nomeCompleto": "Nome Completo
+            "nomeCompleto": "Nome Completo"
         }
     ]
 ```
+
 </details>
 </br>
 
@@ -60,6 +64,7 @@ O que foi utlizado neste projeto:
 
 <details>
 <summary>Response</summary>
+    
 ```json
     {
         "id": 0,
@@ -69,6 +74,7 @@ O que foi utlizado neste projeto:
         "endereco": "Rua Tal"
     }
 ```
+
 </details>
 </br>
 
@@ -77,6 +83,7 @@ O que foi utlizado neste projeto:
 
 <details>
 <summary>Request</summary>
+    
 ```json
     {
         "nomeCompleto": "Nome Completo",
@@ -85,9 +92,11 @@ O que foi utlizado neste projeto:
         "endereco": "Rua Tal"
     }
 ```
+
 </details>
 <details>
 <summary>Response</summary>
+    
 ```json
     {
         "id": 0,
@@ -97,6 +106,7 @@ O que foi utlizado neste projeto:
         "endereco": "Rua Tal"
     }
 ```
+
 </details>
 </br>
 
@@ -105,6 +115,7 @@ O que foi utlizado neste projeto:
 
 <details>
 <summary>Request</summary>
+    
 ```json
     {
         "nomeCompleto": "Nome Completo",
@@ -113,9 +124,11 @@ O que foi utlizado neste projeto:
         "endereco": "Rua Tal"
     }
 ```
+
 </details>
 <details>
 <summary>Response</summary>
+    
 ```json
     {
         "id": 0,
@@ -125,6 +138,7 @@ O que foi utlizado neste projeto:
         "endereco": "Rua Tal"
     }
 ```
+
 </details>
 </br>
 
@@ -133,8 +147,9 @@ O que foi utlizado neste projeto:
 
 ## Materiais utilizados
 
+</br>
 <p align="center">
-        <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*3LCl6RxN9cyYyl8z.jpeg" width="400px">
+        <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*3LCl6RxN9cyYyl8z.jpeg" width="500px">
 </p>
 <p align="center">
     <span style="font-size: 12px; text-align: center; width: 100%">Fonte: Implementando na prática Rest API com conceitos de DDD + .NET CORE + SQL no Docker + IoC -[Parte Técnica]</br>
